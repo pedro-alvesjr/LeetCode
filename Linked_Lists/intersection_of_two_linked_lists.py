@@ -10,14 +10,8 @@ class Solution:
         curA = headA
         curB = headB
 
-        while curA:
-            curB = headB
-
-            while curB:
-                if curA == curB:
-                    return curA
-                curB = curB.next
-        
-            curA = curA.next
+        while curA != curB:
+            curA = curA.next if curA else headB
+            curB = curB.next if curB else headA
          
-        return None
+        return curA
