@@ -1,6 +1,5 @@
 import os
 
-
 #
 # Complete the 'breakingRecords' function below.
 #
