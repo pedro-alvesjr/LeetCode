@@ -52,6 +52,9 @@ def print_singly_linked_list(node, sep, fptr):
 def deleteNode(llist, position):
     before = llist
     current = before.next
+
+    if position == 0:
+        return llist.next
     
     for i in range(position - 1):
         before = before.next
