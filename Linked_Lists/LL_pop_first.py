@@ -66,3 +66,15 @@ class LinkedList:
             temp.next = None
         self.length -= 1
         return temp
+    
+
+my_linked_list = LinkedList(2)
+my_linked_list.append(1)
+
+
+# (2) Items - Returns 2 Node
+print(my_linked_list.pop_first().value)
+# (1) Item -  Returns 1 Node
+print(my_linked_list.pop_first().value)
+# (0) Items - Returns None
+print(my_linked_list.pop_first())
