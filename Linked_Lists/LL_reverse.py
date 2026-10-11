@@ -112,3 +112,8 @@ class LinkedList:
         pre.next, temp.next = temp.next, None
         self.length -= 1
         return temp
+    
+    def reverse_list(self):
+        if self.length <= 1:
+            return False
+        temp = self.head
