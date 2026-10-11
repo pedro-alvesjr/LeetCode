@@ -101,4 +101,14 @@ class LinkedList:
         self.length += 1
         return True
     
-    
+    def remove(self, index):
+        if self.length == 0 or index >= self.length or index < 0:
+            return None
+        if index == self.length - 1:
+            return self.pop()
+        if index == 0:
+            return self.pop_first()
+        temp, pre = self.get(index), self.get(index - 1)
+        pre.next, temp.next = temp.next, None
+        self.length -= 1
+        return temp
